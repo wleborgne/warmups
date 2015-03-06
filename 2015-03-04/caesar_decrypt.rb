@@ -19,7 +19,7 @@ if !shift_input.nil?
   puts "Using shift of #{shift_input}:"
   decrypt(encrypted_message, shift_input.to_i)
 else
-  26.times do |number|
+  25.times do |number|
     shift_value = number + 1
     puts "With a shift of #{shift_value}:"
     decrypt(encrypted_message, shift_value)
