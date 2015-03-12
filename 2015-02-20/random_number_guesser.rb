@@ -7,10 +7,10 @@ def ask_for_guess
   gets.chomp.to_i
 end
 
-def analyze_guess(guess)
-  if guess < $number
+def analyze_guess(guess, number)
+  if guess < number
     'Too low'
-  elsif guess > $number
+  elsif guess > number
     'Too high'
   else
     # If the guess is correct
@@ -19,14 +19,14 @@ def analyze_guess(guess)
 end
 
 # Pick a random number from 1 to 10
-$number = rand(10) + 1
+number = rand(10) + 1
 response = ''
 
 # Enter loop
 while response != 'You got it'
   # Ask user for guess
   guess = ask_for_guess
-  
-  response = analyze_guess(guess)
+
+  response = analyze_guess(guess, number)
   puts response
 end
