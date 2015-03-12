@@ -3,7 +3,7 @@
 # Implement a playing card
 class Card
   attr_reader :suit, :face_value
-  
+
   # CLUB = "\u2663"
   # DIAMOND = "\u2666"
   # SPADE = "\u2660"
@@ -18,7 +18,7 @@ class Card
   def to_s
     "#{face_value} of #{suit}"
   end
-  
+
   # def <=>(other)
   #   if suit == other.suit
   #     Card.values.index(value) <=> Card.values.index(other.value)
@@ -49,7 +49,7 @@ class Deck
     if @deck.length > 0
       @deck.pop
     else
-      'No more cards'  
+      'No more cards'
     end
   end
 
@@ -61,14 +61,14 @@ class Deck
     if @deck.length > 0
       @deck.each(&:to_s)
     else
-      "Empty deck"
+      'Empty deck'
     end
   end
 
   def count
     @deck.count
   end
-  
+
   def sort!
     @deck.sort!
   end
