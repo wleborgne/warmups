@@ -1,6 +1,6 @@
 require_relative '../../lib/to_fizz'
 
-describe '#to_fizz' do
+describe 'Fixnum#to_fizz' do
   it 'is a method of a Fixnum' do
     expect(1.respond_to?(:to_fizz)).to be_truthy
   end
