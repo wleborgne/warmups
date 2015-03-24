@@ -1,0 +1,22 @@
+<h1>Bottles of beer</h1>
+<% @number.times do |number| %>
+  <%= image_tag('beer.jpg') %>
+  <% if number % 10 == 9 %>
+    <br/>
+  <% end %>
+<% end %>
+<p/>
+<% if @number == 0  %>
+  No more bottles of beer on the wall...<br/>
+  No more bottles of beer.
+<% else %>
+<%= pluralize(@number, 'bottle') %> of beer on the wall... <br/>
+<%= pluralize(@number, 'bottle') %> of beer...
+<br/>
+  
+<% end %>
+<% if @number > 0 %>
+<%= link_to 'Take one down...', take_path(@number - 1) %>
+<% else %>
+<%= link_to 'Go to the store', take_path(0) %>
+<% end %>
