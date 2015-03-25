@@ -1,0 +1,10 @@
+<% if @number > 0 %>
+  <% bottle_string = pluralize(@number, 'bottle') %>
+  <%= "#{bottle_string} of water on the wall..." %> <br/>
+  <%= "#{bottle_string} of water" %><br/>
+  <%= link_to 'Take one down... ', take_path(@number - 1) %>
+<% else %>
+  <%= 'No more bottles of water on the wall...' %><br/>
+  <%= 'No more bottles of water' %><br/>
+  <%= link_to 'Go to the store', take_path(@number - 1) %>
+<% end %>

@@ -1,0 +1,5 @@
+<% if @number >= 0 %>
+  <%= link_to 'Pass it around...', bottles_path(@number) %>
+<% else %>
+  <%= link_to 'Buy some more', bottles_path(99) %>
+<% end %>
